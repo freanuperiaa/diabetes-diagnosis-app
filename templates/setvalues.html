@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Diabetes Checker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+    <style>
+        .btn-primary {
+            margin-top: 30px;
+        }
+        .slider-container {
+            margin-top: 25px;
+        }
+
+        .label-value-row {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 0px 200px;
+        }
+        input#customRange2.form-range {
+            width: 550px;
+        }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Set values</h1>
+      <br>
+
+        <div class="row">
+            <div class="col-lg-10">
+                <form action="#" method="post" style="text-align: center;">
+                    <p>Set the patient's health info</p>
+
+                    <!-- PREGNANCY -->
+                    <div class="slider-container">
+                        <div class="label-value-row">
+                            <p>Pregnancy</p>
+                            <p id="pregnancyValue">0</p>
+                        </div>
+                        <input
+                         type="range" class="form-range" min="0" max="18" 
+                         id="customRange2" name="pregnancy" value="0"
+                         oninput="updatePregnancyTextInput(this.value);"
+                         >
+                    </div>
+
+                    <!-- GLUCOSE -->
+                    <div class="slider-container">
+                        <div class="label-value-row">
+                            <p>Glucose</p>
+                            <p id="glucoseValue">0</p>
+                        </div>
+                        <input
+                            type="range" class="form-range" min="0" max="200" 
+                            id="customRange2" name="glucose" value="0"
+                            oninput="updateGlucoseTextInput(this.value);"
+                            >
+                    </div>
+
+                    <!-- BP -->
+                    <div class="slider-container">
+                        <div class="label-value-row">
+                            <p>Blood Pressure</p>
+                            <p id="bpValue">0</p>
+                        </div>
+                        <input
+                            type="range" class="form-range" min="0" max="122" 
+                            id="customRange2" name="bp" value="0"
+                            oninput="updateBPTextInput(this.value);"
+                            >
+                    </div>
+
+                    <!-- SKIN THICKNESS -->
+                    <div class="slider-container">
+                        <div class="label-value-row">
+                            <p>Skin Thickness</p>
+                            <p id="skinThicknessValue">0</p>
+                        </div>
+                        <input
+                            type="range" class="form-range" min="0" max="99" 
+                            id="customRange2" name="skinThickness" value="0"
+                            oninput="updateSkinThicknessTextInput(this.value);"
+                            >
+                    </div>
+
+                    <!-- INSULIN -->
+                    <div class="slider-container">
+                        <div class="label-value-row">
+                            <p>Insulin</p>
+                            <p id="insulinValue">0</p>
+                        </div>
+                        <input
+                            type="range" class="form-range" min="0" max="850" 
+                            id="customRange2" name="insulin" value="0"
+                            oninput="updateInsulinTextInput(this.value);"
+                            >
+                    </div>
+
+                    <!-- BMI -->
+                    <div class="slider-container">
+                        <div class="label-value-row">
+                            <p>BMI (Body Mass Index)</p>
+                            <p id="BMIValue">0.0</p>
+                        </div>
+                        <input
+                            type="range" class="form-range" min="0" max="70" 
+                            id="customRange2" name="bmi" step="0.1" value="0"
+                            oninput="updateBMITextInput(this.value);"
+                            >
+                    </div>
+
+                    <!-- DIABETES PEDIGREE -->
+                    <div class="slider-container">
+                        <div class="label-value-row">
+                            <p>Diabetes Pedigree</p>
+                            <p id="diabetesPedigreeValue">0.00</p>
+                        </div>
+                        <input
+                            type="range" class="form-range" min="0" max="2.5" 
+                            id="customRange2" name="diabetesPedigree" step="0.01" value="0"
+                            oninput="updateDiabetesPedigreeTextInput(this.value);"
+                            >
+                    </div>
+
+                    <!-- AGE -->
+                    <div class="slider-container">
+                        <div class="label-value-row">
+                            <p>Age</p>
+                            <p id="ageValue">18</p>
+                        </div>
+                        <input
+                            type="range" class="form-range" min="18" max="90" 
+                            id="customRange2" name="age" value="18"
+                            oninput="updateAgeTextInput(this.value);"
+                            >
+                    </div>
+            
+                    <button class="btn btn-primary" type="submit" value="submit">
+                        submit
+                    </button>
+                    
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script>
+        function updatePregnancyTextInput(val) {
+          document.getElementById('pregnancyValue').innerHTML = val; 
+        }
+
+        function updateGlucoseTextInput(val) {
+          document.getElementById('glucoseValue').innerHTML = val; 
+        }
+
+        function updateBPTextInput(val) {
+          document.getElementById('bpValue').innerHTML = val; 
+        }
+
+        function updateSkinThicknessTextInput(val) {
+          document.getElementById('skinThicknessValue').innerHTML = val; 
+        }
+
+        function updateInsulinTextInput(val) {
+          document.getElementById('insulinValue').innerHTML = val; 
+        }
+
+        function updateBMITextInput(val) {
+          document.getElementById('BMIValue').innerHTML = val; 
+        }
+
+        function updateDiabetesPedigreeTextInput(val) {
+          document.getElementById('diabetesPedigreeValue').innerHTML = val; 
+        }
+
+        function updateAgeTextInput(val) {
+          document.getElementById('ageValue').innerHTML = val; 
+        }
+    </script>
+  </body>
+</html>

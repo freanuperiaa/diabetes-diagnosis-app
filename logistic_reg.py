@@ -57,3 +57,15 @@ class LinearRegressionModel():
 
 lr_model = LinearRegressionModel()
 print(lr_model.predict(1, 85, 66, 29, 0, 26.6, 0.351, 31))
+
+"""
+    Min and Max Values
+    pregnancies: 0 - 17
+    glucose: 0 - 199
+    blood pressure: 0 - 122
+    SkinThickness: 0 - 99
+    Insulin: 0 - 846
+    BMI: 0.0 - 67.1
+    DiabetesPedigreeFunction: 0 - 2.42
+    Age: 18 - 81
+"""
