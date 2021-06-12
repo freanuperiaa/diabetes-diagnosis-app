@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Diabetes Checker</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+        <style>
+
+            .result-container{
+                margin-top: 25%;
+                border: 1px solid skyblue;
+                padding:25px;
+                border-radius: 25px;
+            }
+
+            .result-result {
+                font-weight: bold;
+                font-style: italic;
+            }
+        </style>
+      </head>
+      <body>
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-10 result-container">
+                      <p class="pretext">
+                          Based on the patient's health info provided, using the 
+                          Multivariate Linear Regression Model,
+                      </p>
+
+                      <p class="result">
+                          We predict that the patient <span class="result-result">has no diabetes.</span> 
+                      </p>
+
+                      <p class="after-result">
+                        We hope that the patient continues on living a healthy live, or if it is not the case, start living a healthy life.
+                    </p>
+                  </div>
+              </div>
+          </div>
+      </body>
+</html>
